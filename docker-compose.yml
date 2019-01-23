@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  ssh-tunel:
+    image: ssh_tunel_i
+    build:
+      context: .
+      args:
+        UID: ${UID}
+        GID: ${GID}
+    command: vmstat 1
